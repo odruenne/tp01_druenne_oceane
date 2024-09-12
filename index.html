@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <title>TP01_DRUENNE_OCÉANE</title>
+    </head>
+    <body>
+        <h1>Formulaire d'inscription</h1>
+        <form>
+            <label for="lastName">Nom : </label>
+            <input type="text" name="lastName" id="lastName" required />
+            <label for="firstName">Prénom : </label>
+            <input type="text" name="firstName" id="firstName" required />
+            <label for="address">Adresse postale : </label>
+            <input type="text" name="address" id="address" required />
+            <label for="zipCode">Code postal : </label>
+            <input type="text" name="zipCode" id="zipCode" pattern="[0-9]{5}" required/>
+            <label for="city">Ville : </label>
+            <input type="text" name="city" id="city" required />
+            <label for="phoneNumber">Téléphone : </label>
+            <small>Format: 06-05-04-03-02</small>
+            <input type="tel" name="phoneNumber" id="phoneNumber" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required /> 
+            <label for="mailAddress">Adresse mail : </label>
+            <input type="email" name="mailAddress" id="mailAddress" pattern="+@example\.com" required />
+            <label for="civility">Civilité : </label>
+            <select name="civility" id="civility">
+                <option value="">--Choisir une civilité--</option>
+                <option value="madame">Madame</option>
+                <option value="mademoiselle">Mademoiselle</option>
+                <option value="monsieur">Monsieur</option>
+              </select>
+            <label for="login">Identifiant : </label>
+            <input type="text" name="login" id="login"required>
+            <label for="password">Mot de passe : </label>
+            <small>8 caractères minimum</small>
+            <input type="password" id="password" name="password" minlength="8" required />
+            <label for="confirmPassword">Confirmation du mot de passe : </label>
+            <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required />
+            <input type="submit" value="Envoyer"/>
+        </form>
+    </body>
+</html>
